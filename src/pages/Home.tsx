@@ -1,5 +1,5 @@
 import { HeroSection } from 'components/HeroSection/index.ts';
-import CostCalculator from 'components/CostCalculator';
+import { CostCalculator } from 'components/СostСalculator';
 import ProductsSection from 'components/ProductsSection';
 import AdvantagesSection from 'components/AdvantagesSection';
 import ReviewsSection from 'components/ReviewsSection';

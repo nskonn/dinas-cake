@@ -21,17 +21,17 @@ export const HeroTextBlock = () => {
             <div className="flex flex-col sm:flex-row gap-4">
                 <button
                     onClick={() => scrollTo('calculator')}
-                    className="group bg-gradient-to-r from-rose-500 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
+                    className="group bg-gradient-to-r from-rose-500 to-pink-600 text-white px-7 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
                 >
                     Рассчитать стоимость
-                    <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
+                    <ArrowDown className="w-5 h-5 duration-300" />
                 </button>
 
                 <button
                     onClick={() => scrollTo('order-form')}
-                    className="group border-2 border-rose-500 text-rose-600 hover:bg-rose-500 hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2"
+                    className="group border-2 border-rose-500 text-rose-600 hover:bg-rose-500 hover:text-white px-7 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2"
                 >
-                    Заказать торт
+                    Заказать десерт
                 </button>
             </div>
         </div>
