@@ -11,7 +11,7 @@ export default function Navigation() {
 
   const navigationItems = [
     { label: 'Калькулятор', id: 'calculator' },
-    { label: 'Продукты', id: 'products' },
+    { label: 'Портфолио', id: 'products' },
     { label: 'Отзывы', id: 'reviews' },
     { label: 'Заказать', id: 'order-form' }
   ];

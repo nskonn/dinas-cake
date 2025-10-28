@@ -1,4 +1,4 @@
-import { Heart, Instagram, MessageCircle, Send, Phone, Mail } from 'lucide-react';
+import { MessageCircle, Send, Phone, Mail } from 'lucide-react';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -17,7 +17,7 @@ export default function Footer() {
                         </h3>
                         <p className="font-poppins text-gray-300 mb-6 max-w-md">
                             Создаем красивые, вкусные индивидуальные торты и пирожные для самых
-                            сладких моментов жизни. Сделано с любовью, натуральными ингредиентами и
+                            сладких моментов жизни. Сделано из натуральных ингредиентов и с
                             вниманием к каждой детали.
                         </p>
                         <div className="flex gap-4">
@@ -97,19 +97,17 @@ export default function Footer() {
                 <div className="border-t border-gray-700 pt-8">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <div className="flex items-center gap-2 font-poppins text-gray-300">
-                            <span>© {currentYear} Dina`s cake. Сделано с</span>
-                            <Heart className="w-4 h-4 text-rose-400 fill-current" />
-                            <span>для сладких торжеств.</span>
+                            <span>© {currentYear} Dina`s cake</span>
                         </div>
 
-                        <div className="flex gap-6 font-poppins text-sm">
-                            <a
-                                href="#"
-                                className="text-gray-300 hover:text-rose-400 transition-colors duration-300"
-                            >
-                                Политика конфиденциальности
-                            </a>
-                        </div>
+                        {/*<div className="flex gap-6 font-poppins text-sm">*/}
+                        {/*    <a*/}
+                        {/*        href="#"*/}
+                        {/*        className="text-gray-300 hover:text-rose-400 transition-colors duration-300"*/}
+                        {/*    >*/}
+                        {/*        Политика конфиденциальности*/}
+                        {/*    </a>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
             </div>
