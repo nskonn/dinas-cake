@@ -3,7 +3,7 @@ import HomePage from 'pages/Home';
 
 export default function App() {
     return (
-        <Router>
+        <Router basename="/dinas-cake">
             <Routes>
                 <Route path="/" element={<HomePage />} />
             </Routes>
