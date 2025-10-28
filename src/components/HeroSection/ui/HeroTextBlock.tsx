@@ -5,7 +5,7 @@ export const HeroTextBlock = () => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
     return (
-        <div className="relative z-10">
+        <div className="relative z-10 ">
             <h1 className="font-nunito text-5xl font-bold text-gray-800 mb-6 leading-tight">
                 Авторские десерты
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-pink-600 block">

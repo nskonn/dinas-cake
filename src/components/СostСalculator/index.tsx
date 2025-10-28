@@ -1,10 +1,8 @@
-import { Calculator } from 'lucide-react';
 import { useCostCalculator } from './model/hooks';
 import { CategorySelector } from './ui/CategorySelector';
 import { DessertSubcategory } from './ui/DessertSubcategory';
 import { FlavorSelector } from './ui/FlavorSelector';
 import { QuantityInput } from './ui/QuantityInput.tsx';
-import { AdditionalOptions } from './ui/AdditionalOptions.tsx';
 import { TotalCost } from './ui/TotalCost.tsx';
 import { OrderButton } from './ui/OrderButton.tsx';
 import { InfoBox } from './ui/InfoBox.tsx';
@@ -17,12 +15,11 @@ export const CostCalculator = () => {
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <div className="flex items-center justify-center gap-3 mb-4">
-                        <Calculator className="w-8 h-8 text-rose-600" />
                         <h2 className="font-bold text-4xl text-gray-800">
                             Рассчитайте стоимость заказа
                         </h2>
                     </div>
-                    <p className="font-inter text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="font-poppins text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
                         Выберите категорию, вкус и количество — калькулятор покажет примерную
                         стоимость
                     </p>

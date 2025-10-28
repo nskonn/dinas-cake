@@ -36,3 +36,14 @@ export const getStep = (category: string) =>
 
 export const scrollToOrder = () =>
     document.getElementById('order-form')?.scrollIntoView({ behavior: 'smooth' });
+
+export const getSubcategoryName = (category:string) => {
+    switch (category) {
+        case 'cakes':
+            return 'Торт';
+        case 'bento':
+            return 'Бенто-торт';
+        default:
+            return 'Десерт';
+    }
+}

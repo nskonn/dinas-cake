@@ -43,24 +43,21 @@ export default function OrderForm() {
         const message = encodeURIComponent(
             'Привет! Я хотел бы заказать индивидуальный торт. Можете помочь мне с деталями?',
         );
-        window.open(`https://wa.me/1234567890?text=${message}`, '_blank');
+        window.open(`https://wa.me/+79185471409?text=${message}`, '_blank');
     };
 
     const openTelegram = () => {
-        const message = encodeURIComponent(
-            'Привет! Я хотел бы заказать индивидуальный торт. Можете помочь мне с деталями?',
-        );
-        window.open(`https://t.me/sweetdreamsbakery?text=${message}`, '_blank');
+        window.open(`https://t.me/disk_cake`, '_blank');
     };
 
     return (
         <section id="order-form" className="py-20 bg-gradient-to-br from-rose-50 to-pink-50">
             <div className="max-w-4xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    <h2 className="text-4xl font-bold text-gray-800 mb-6">
                         Закажите торт мечты
                     </h2>
-                    <p className="font-poppins text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="font-poppins  text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
                         Расскажите нам о вашем видении, и мы создадим что-то действительно особенное
                         для вашего мероприятия
                     </p>
@@ -117,62 +114,10 @@ export default function OrderForm() {
                                     </div>
                                 </div>
 
-                                <div>
-                                    <label className="block font-poppins font-medium text-gray-700 mb-2">
-                                        Адрес электронной почты
-                                    </label>
-                                    <input
-                                        type="email"
-                                        {...register('email')}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all duration-300"
-                                        placeholder="your@email.com"
-                                    />
-                                </div>
-
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div>
                                         <label className="block font-poppins font-medium text-gray-700 mb-2">
-                                            Дата мероприятия *
-                                        </label>
-                                        <input
-                                            type="date"
-                                            {...register('eventDate', {
-                                                required: 'Дата мероприятия обязательна',
-                                            })}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all duration-300"
-                                        />
-                                        {errors.eventDate && (
-                                            <p className="text-red-500 text-sm mt-1">
-                                                {errors.eventDate.message}
-                                            </p>
-                                        )}
-                                    </div>
-
-                                    <div>
-                                        <label className="block font-poppins font-medium text-gray-700 mb-2">
-                                            Тип мероприятия
-                                        </label>
-                                        <select
-                                            {...register('eventType')}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all duration-300"
-                                        >
-                                            <option value="">Выберите тип мероприятия</option>
-                                            <option value="birthday">День рождения</option>
-                                            <option value="wedding">Свадьба</option>
-                                            <option value="anniversary">Годовщина</option>
-                                            <option value="graduation">Выпускной</option>
-                                            <option value="corporate">
-                                                Корпоративное мероприятие
-                                            </option>
-                                            <option value="other">Другое</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label className="block font-poppins font-medium text-gray-700 mb-2">
-                                            Количество порций
+                                            Категория десерта
                                         </label>
                                         <select
                                             {...register('servings')}
@@ -189,7 +134,7 @@ export default function OrderForm() {
 
                                     <div>
                                         <label className="block font-poppins font-medium text-gray-700 mb-2">
-                                            Бюджет
+                                            Название десерта
                                         </label>
                                         <select
                                             {...register('budget')}
@@ -224,41 +169,6 @@ export default function OrderForm() {
                                     )}
                                 </div>
 
-                                <div>
-                                    <label className="block font-poppins font-medium text-gray-700 mb-2">
-                                        Предпочтительный способ связи
-                                    </label>
-                                    <div className="flex gap-4">
-                                        <label className="flex items-center">
-                                            <input
-                                                type="radio"
-                                                value="phone"
-                                                {...register('preferredContact')}
-                                                className="mr-2 text-rose-500"
-                                            />
-                                            <span className="font-poppins">Телефон</span>
-                                        </label>
-                                        <label className="flex items-center">
-                                            <input
-                                                type="radio"
-                                                value="email"
-                                                {...register('preferredContact')}
-                                                className="mr-2 text-rose-500"
-                                            />
-                                            <span className="font-poppins">Email</span>
-                                        </label>
-                                        <label className="flex items-center">
-                                            <input
-                                                type="radio"
-                                                value="whatsapp"
-                                                {...register('preferredContact')}
-                                                className="mr-2 text-rose-500"
-                                            />
-                                            <span className="font-poppins">WhatsApp</span>
-                                        </label>
-                                    </div>
-                                </div>
-
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
@@ -283,7 +193,7 @@ export default function OrderForm() {
                                 Быстрая связь
                             </h3>
                             <p className="font-poppins text-gray-600 mb-6">
-                                Предпочитаете общаться напрямую? Свяжитесь с нами удобным способом.
+                                Предпочитаете общаться напрямую? Свяжитесь удобным для Вас способом.
                             </p>
 
                             <div className="space-y-4">
@@ -304,7 +214,7 @@ export default function OrderForm() {
                                 </button>
 
                                 <a
-                                    href="tel:+1234567890"
+                                    href="tel:+79185471409"
                                     className="w-full bg-gray-700 hover:bg-gray-800 text-white py-3 rounded-xl font-medium transition-all duration-300 flex items-center justify-center gap-2"
                                 >
                                     <Phone className="w-5 h-5" />
@@ -318,10 +228,9 @@ export default function OrderForm() {
                                 Сроки заказа
                             </h3>
                             <ul className="font-poppins text-sm text-gray-600 space-y-2">
-                                <li>• Индивидуальные торты: за 1-2 недели</li>
-                                <li>• Простые дизайны: за 3-5 дней</li>
-                                <li>• Большие заказы: за 2-3 недели</li>
-                                <li>• Срочные заказы: дополнительная плата</li>
+                                <li>• Простые дизайны: 3-5 дней</li>
+                                <li>• Индивидуальные торты: 5-7 дней</li>
+                                <li>• Большие заказы: 2-3 недели</li>
                             </ul>
                         </div>
                     </div>

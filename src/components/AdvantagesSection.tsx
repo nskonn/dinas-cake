@@ -52,10 +52,10 @@ export default function AdvantagesSection() {
         <section className="py-20 bg-white">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    <h2 className="text-4xl font-bold text-gray-800 mb-6">
                         Почему выбирают нас
                     </h2>
-                    <p className="font-poppins text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="font-poppins text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
                         Мы стремимся к совершенству во всех аспектах нашего мастерства — от
                         ингредиентов до финальной подачи
                     </p>

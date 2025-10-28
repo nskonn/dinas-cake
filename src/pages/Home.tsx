@@ -7,10 +7,12 @@ import ProcessSection from 'components/ProcessSection';
 import OrderForm from 'components/OrderForm';
 import ContactSection from 'components/ContactSection';
 import Footer from 'components/Footer';
+import Navigation from 'components/Navigation.tsx';
 
 export default function Home() {
     return (
         <div className="min-h-screen">
+            <Navigation />
             <HeroSection />
             <div id="calculator">
                 <CostCalculator />

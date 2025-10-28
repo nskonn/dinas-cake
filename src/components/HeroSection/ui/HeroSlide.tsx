@@ -15,7 +15,7 @@ export const HeroSlide = ({ image, alt, label, className = '', labelClassName = 
                 className="relative rounded-3xl shadow-2xl w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div
-                className={`absolute bottom-4 left-4 bg-white/30 bg-opacity-20 border border-rose-200 backdrop-blur-sm rounded-2xl px-4 py-1 shadow-lg ${labelClassName}`}
+                className={`absolute bottom-4 left-4 bg-white/50 bg-opacity-20 border border-rose-200 backdrop-blur-sm rounded-2xl px-4 py-2 shadow-lg ${labelClassName}`}
             >
                 <span className="font-nunito text-rose-950 text-md">{label}</span>
             </div>

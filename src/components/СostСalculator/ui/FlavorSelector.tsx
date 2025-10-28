@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import { getFlavors } from '../lib/utils.ts';
+import { getFlavors, getSubcategoryName } from '../lib/utils.ts';
 
 type FlavorSelectorProps = {
     category: string;
@@ -16,13 +16,16 @@ export const FlavorSelector = ({
 }: FlavorSelectorProps) => {
     const flavors = getFlavors(category, subcategory);
 
+    const isCake = category === 'cakes';
+    const isBento = category === 'bento';
+    const isDessert = category === 'desserts';
+
+
     return (
-        (category === 'cakes' ||
-            category === 'bento' ||
-            (category === 'desserts' && subcategory)) && (
+        (isCake || isBento || (isDessert && subcategory)) && (
             <div className="mb-8">
                 <label className="block font-poppins font-semibold text-gray-800 mb-4 text-lg">
-                    Вкус
+                    Выберите {getSubcategoryName(category)}
                 </label>
 
                 {/* Desktop: Button grid */}

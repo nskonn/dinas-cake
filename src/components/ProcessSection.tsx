@@ -52,20 +52,20 @@ export default function ProcessSection() {
         <section className="py-20 bg-white">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    <h2 className="text-4xl font-bold text-gray-800 mb-6">
                         Как сделать заказ
                     </h2>
-                    <p className="font-poppins text-xl text-gray-600 max-w-2xl mx-auto">
-                        Наш простой 4-шаговый процесс гарантирует, что вы получите именно тот торт,
-                        о котором мечтаете
+                    <p className="font-poppins text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                        Простой 4-х шаговый процесс гарантирует, что вы получите именно то,
+                        что Вам нужно
                     </p>
                 </div>
 
                 {/* Desktop: Grid layout */}
                 <div className="hidden md:grid md:grid-cols-4 gap-8">
                     {steps.map((step, index) => (
-                        <div key={index} className="relative text-center group">
-                            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 hover:from-rose-100 hover:to-pink-100 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                        <div key={index} className="group relative text-center">
+                            <div className="h-full bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 hover:from-rose-100 hover:to-pink-100 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
                                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-rose-500 to-pink-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                                     <step.icon className="w-8 h-8 text-white" />
                                 </div>
@@ -83,11 +83,6 @@ export default function ProcessSection() {
                                 </p>
                             </div>
 
-                            {index < steps.length - 1 && (
-                                <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                                    <div className="w-8 h-0.5 bg-gradient-to-r from-rose-300 to-pink-300"></div>
-                                </div>
-                            )}
                         </div>
                     ))}
                 </div>
@@ -99,7 +94,7 @@ export default function ProcessSection() {
                             {steps.map((step, index) => (
                                 <div key={index} className="embla__slide flex-shrink-0 w-full px-4">
                                     <div className="relative text-center group">
-                                        <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 transition-all duration-300">
+                                        <div className="bg-gradient-to-br  mt-4 from-rose-50 to-pink-50 rounded-3xl p-8 transition-all duration-300">
                                             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-rose-500 to-pink-600 rounded-2xl mb-6 transition-transform duration-300">
                                                 <step.icon className="w-8 h-8 text-white" />
                                             </div>
@@ -130,7 +125,7 @@ export default function ProcessSection() {
                             <button
                                 key={index}
                                 onClick={() => emblaApi && emblaApi.scrollTo(index)}
-                                className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                                className={`w-2 h-2 rounded-full transition-all duration-300 ${
                                     index === selectedIndex
                                         ? 'bg-rose-500 scale-125'
                                         : 'bg-gray-300 hover:bg-gray-400'

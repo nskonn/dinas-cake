@@ -11,8 +11,10 @@ export const HeroSection = () => {
     return (
         <section className="relative min-h-screen flex items-center bg-gradient-to-br from-rose-50 to-pink-100 overflow-hidden">
             <div className="max-w-6xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center">
-                <HeroTextBlock />
-                <div className="relative">
+                <div className="mt-24 mt:mb-0">
+                    <HeroTextBlock />
+                </div>
+                <div className="mb-10 relative">
                     <div className="absolute h-[400px] inset-0 bg-gradient-to-br from-rose-200 to-pink-200 rounded-3xl transform rotate-3 opacity-50"></div>
                     <div className="embla overflow-hidden rounded-3xl" ref={emblaRef}>
                         <div className="embla__container flex">
